@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navPhotoList">
+
+    <fragment
+        android:id="@+id/navPhotoList"
+        android:name="com.example.photos.ui.photolist.PhotoListFragment"
+        android:label="@string/title_photo_list">
+        <action
+            android:id="@+id/actionNavigateToPhotoDetails"
+            app:destination="@id/navPhotoDetails"
+            app:popUpTo="@id/navPhotoList">
+            <argument
+                android:name="photoId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navPhotoDetails"
+        android:name="com.example.photos.ui.photodetails.PhotoDetailsFragment"
+        android:label="Photo #{photoId}">
+        <argument
+            android:name="photoId"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>

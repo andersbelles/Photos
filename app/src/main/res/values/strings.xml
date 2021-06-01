@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Photos</string>
+    <string name="title_photo_list">Photos</string>
+    <string name="photo_list_button_retry">Retry</string>
+</resources>
